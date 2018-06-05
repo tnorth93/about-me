@@ -1,7 +1,14 @@
 body {
-  color: #ff0000;
+  margin: 10px;
+  color: blue;
 }
 
 h1 {
  font-size: 50px;
+}
+
+li {
+  color: blueviolet;
+  padding:3px;
+  margin: 20px;
 }
