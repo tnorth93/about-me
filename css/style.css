@@ -1,14 +1,18 @@
 body {
   margin: 10px;
   color: blue;
+  font-family: 'Helvetica';
+  opacity: .85;
 }
 
 h1 {
- font-size: 50px;
+ font-size: 40px;
+ font-weight: bold;
 }
 
 li {
   color: blueviolet;
-  padding:3px;
-  margin: 20px;
+  padding:5px;
+  margin-left: 13px;
+  list-style-position: inside;
 }
