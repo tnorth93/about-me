@@ -1,9 +1,12 @@
 'use strict';
 
+var incorrectInput = 'Input type was not appropriate for the question';
+var userName = prompt('What\'s your name?');
 var favNum = 17;
 var relGuess = 'Not used yet';
-var userName = prompt('What\'s your name?');
-var incorrectInput = 'Input type was not appropriate for the question';
+var citiesLived = ['tacoma', 'puyallup', 'federal way', 'orlando'];
+var counter = 0;
+
 // var userAnswer = prompt('Play this guessing game to learn a little more about me! Remember to answer with yes or no.').toLowerCase();
 // if (userAnswer === 'yes') {
 //   console.log(userName + ' agreed to play the guessing game');
@@ -67,8 +70,8 @@ var incorrectInput = 'Input type was not appropriate for the question';
 //     alert('I don\'t think that was a real answer, ' + userName + '. Please stick to yes or no answers.');
 //   }
 
-var i = 0;
-for(i = 0; i < 4; i++) {
+
+for (var i = 0; i < 4; i++) {
   var ansSix = parseInt(prompt('Can you guess my favorite number? You get 4 tries and I\'ll even give you hints!'));
   if (ansSix === favNum) {
     console.log(userName + ' guessed ' + favNum + ' correctly!');
@@ -88,7 +91,15 @@ for(i = 0; i < 4; i++) {
   }
 }
 
-prompt('this is quesiton 7');
+while (counter < 7) {
+  counter++;
+  var ansSeven = prompt('Can you guess one of the cities I have lived in other than Seattle? You get 6 tries!').toLowerCase();
+  if (citiesLived.includes(ansSeven)) {
+    console.log('winner');
+    counter = 7;
+  }
+}
+
    
 //   console.log(userName + ' has completed the guessing game');
 //   alert('Thank you for playing my guessing game ' + userName + '. You now know a little bit more about me!');
