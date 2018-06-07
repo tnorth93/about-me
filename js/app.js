@@ -9,6 +9,8 @@ var counter = 1;
 var score = 0;
 var wrong = userName + ' that is incorrect.';
 var correct = userName + ', you got it right!';
+var triesSix = 4;
+var triesSeven = 6;
 
 var userAnswer = prompt('Play this guessing game to learn a little more about me! Remember to answer with yes or no until question 6.').toLowerCase();
 if (userAnswer === 'yes') {
@@ -80,7 +82,7 @@ if (userAnswer === 'yes') {
 
 
   for (var i = 0; i < 4; i++) {
-    var ansSix = parseInt(prompt('Can you guess my favorite number? You get 4 tries and I\'ll even give you hints!'));
+    var ansSix = parseInt(prompt('Can you guess my favorite number? You get ' + triesSix));
     if (ansSix === favNum) {
       console.log(userName + ' guessed ' + favNum + ' correctly!');
       alert('That\'s right it\'s ' + favNum + ' , how\'d you know?');
@@ -90,18 +92,21 @@ if (userAnswer === 'yes') {
       relGuess = 'Too high';
       console.log(relGuess);
       alert(relGuess);
+      triesSix--;
     } else if (ansSix < favNum) {
       relGuess = 'Too low';
       console.log(relGuess);
       alert(relGuess);
+      triesSix--;
     } else {
       alert(incorrectInput);
       console.log(incorrectInput);
+      triesSix--;
     }
   }
 
   while (counter < 7) {
-    var ansSeven = prompt('Can you guess one of the cities I have lived in other than Seattle? You get 6 tries!').toLowerCase();
+    var ansSeven = prompt('Can you guess one of the cities I have lived in other than Seattle? You have ' + triesSeven + ' tries!').toLowerCase();
     if (citiesLived.includes(ansSeven)) {
       console.log(userName + ' guessed question 7 correctly');
       alert('Congrats, you guessed correctly!');
@@ -111,6 +116,7 @@ if (userAnswer === 'yes') {
       console.log(userName + ' guessed question 7 incorrectly');
       alert(wrong);
       counter++;
+      triesSeven--;
     }
   }
 
