@@ -8,14 +8,15 @@ var citiesLived = ['tacoma', 'puyallup', 'federal way', 'orlando'];
 var counter = 1;
 var score = 0;
 var wrong = userName + ' that is incorrect.';
+var correct = userName + ', you got it right!';
 
-var userAnswer = prompt('Play this guessing game to learn a little more about me! Remember to answer with yes or no.').toLowerCase();
+var userAnswer = prompt('Play this guessing game to learn a little more about me! Remember to answer with yes or no until question 6.').toLowerCase();
 if (userAnswer === 'yes') {
   console.log(userName + ' agreed to play the guessing game');
   var ansOne = prompt('Was I the rank 1 Barbarian in Diablo 3 for at least 7 minutes?').toLowerCase();
   if (ansOne === 'yes') {
     console.log(userName + ' answered question 1 correctly');
-    alert('Correct!');
+    alert(correct);
     score++;
   } else if (ansOne === 'no') {
     console.log(userName + ' answered question 1 incorrectly');
@@ -28,7 +29,7 @@ if (userAnswer === 'yes') {
   var ansTwo = prompt('Am I over the age of 27?').toLowerCase();
   if (ansTwo === 'no') {
     console.log(userName + ' answered question 2 correctly');
-    alert('Correct!');
+    alert(correct);
     score++;
   } else if (ansTwo === 'yes') {
     console.log(userName + ' answered question 2 incorrectly');
@@ -41,7 +42,7 @@ if (userAnswer === 'yes') {
   var ansThree = prompt('Am I lactose intolerant?').toLowerCase();
   if (ansThree === 'yes') {
     console.log(userName + ' answered question 3 correctly');
-    alert('Correct!');
+    alert(correct);
     score++;
   } else if (ansThree === 'no') {
     console.log(userName + ' answered question 3 incorrectly');
@@ -54,7 +55,7 @@ if (userAnswer === 'yes') {
   var ansFour = prompt('Do I eat cheese regardless of the answer to the previous question?').toLowerCase();
   if (ansFour === 'yes') {
     console.log(userName + ' answered question 4 correctly');
-    alert('Correct!');
+    alert(correct);
     score++;
   } else if (ansFour === 'no') {
     console.log(userName + ' answered question 4 incorrectly');
@@ -86,13 +87,13 @@ if (userAnswer === 'yes') {
       score++;
       break;
     } else if (ansSix > favNum) {
-      console.log(userName + relGuess);
-      relGuess = 'too high';
-      alert(ansSix + ' is ' + relGuess);
+      relGuess = 'Too high';
+      console.log(relGuess);
+      alert(relGuess);
     } else if (ansSix < favNum) {
-      relGuess = 'guessed too low';
-      console.log(userName + relGuess);
-      alert(ansSix + ' is not right, you ' + relGuess);
+      relGuess = 'Too low';
+      console.log(relGuess);
+      alert(relGuess);
     } else {
       alert(incorrectInput);
       console.log(incorrectInput);
@@ -103,6 +104,7 @@ if (userAnswer === 'yes') {
     var ansSeven = prompt('Can you guess one of the cities I have lived in other than Seattle? You get 6 tries!').toLowerCase();
     if (citiesLived.includes(ansSeven)) {
       console.log(userName + ' guessed question 7 correctly');
+      alert('Congrats, you guessed correctly!');
       score++;
       break;
     } else {
@@ -112,8 +114,8 @@ if (userAnswer === 'yes') {
     }
   }
 
-   
   console.log(userName + ' has completed the guessing game');
+  alert('The possible answers for question 7 were: Tacoma, Puyallup, Federal Way, and Orlando');
   alert('Thank you for playing my guessing game ' + userName + '. You scored ' + score + ' out of 7!');
 
 } else if (userAnswer === 'no') {
