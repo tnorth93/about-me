@@ -82,7 +82,7 @@ if (userAnswer === 'yes') {
 
 
   for (var i = 0; i < 4; i++) {
-    var ansSix = parseInt(prompt('Can you guess my favorite number? You get ' + triesSix));
+    var ansSix = parseInt(prompt('Can you guess my favorite number? You get ' + triesSix + ' guesses.'));
     if (ansSix === favNum) {
       console.log(userName + ' guessed ' + favNum + ' correctly!');
       alert('That\'s right it\'s ' + favNum + ' , how\'d you know?');
