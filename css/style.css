@@ -3,6 +3,14 @@ body {
   color: blue;
   font-family: 'Helvetica';
   opacity: .85;
+  background-color: rgb(247, 255, 141, .7);
+}
+
+h1 {
+ font-size: 40px;
+ font-weight: bold;
+ margin: 10px 0px;
+ text-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 hr {
@@ -11,17 +19,20 @@ hr {
   background-image: linear-gradient(to right, rgba(211, 103, 31, 0.6), rgba(211,103,31,0), rgba(0,0,0,0));
 }
 
-h1 {
- font-size: 40px;
- font-weight: bold;
- margin: 10px 0px;
-}
-
 h2 {
   font-size: 33px;
   margin-top: 25px;
   margin: 10px 0px;
   color: rgb(70, 221, 209);
+  text-shadow: 0 0 3px blue;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: initial;
 }
 
 li {
