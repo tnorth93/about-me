@@ -4,11 +4,11 @@ var score = 0;
 var wrong = userName + ' that is incorrect.';
 var correctMessage = userName + ', you got it right!';
 
-//First question
-if (quiz('Play this guessing game to learn a little more about me! Remember to answer with yes or no until question 6.', null)) {
-  score++;
-}
+var playQuiz = confirm('Want to play a game?');
+if (playQuiz === true) {
+  console.log('The game is agreed upon');
 
+}
 //Second question
 if (quiz('Was I the rank 1 Barbarian in Diablo 3 for at least 7 minutes?',correctMessage)) {
   score++;
@@ -36,7 +36,7 @@ if (quiz('Do I own a dog?',correctMessage)) {
 
 function quiz(question, isCorrectMessage) {
   var isCorrect = false;
-  console.log('In quiz funtion, question is: '+question);
+  console.log('In quiz function, question is: '+question);
   var userAnswer = prompt(question).toLowerCase();
   console.log(userName + ' answered: '+userAnswer);
   
