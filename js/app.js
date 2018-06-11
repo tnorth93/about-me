@@ -1,7 +1,7 @@
 'use strict';
 
 // global variables
-var userName;
+var userName = prompt('What\'s your name?');
 var score = 0;
 var wrong = userName + ' that is incorrect.';
 var correct = userName + ', you got it right!';
@@ -9,7 +9,6 @@ var incorrectInput = 'Input type was not appropriate for the question';
 
 // quiz confirmation
 function qConfirm() {
-  var userName = prompt('What\'s your name?');
   if (confirm('Play this guessing game to learn a little more about me! Remember to answer with yes or no until question 6.') === true) {
     console.log(userName + ' agreed to play the guessing game');
   } else {
